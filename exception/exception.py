@@ -1,27 +1,27 @@
-# try: 
-#     raise Exception(2)
-# except Exception as e: 
-#     print(e.args)
+try: 
+    raise Exception(2)
+except Exception as e: 
+    print(e.args)
 
-# class MyEx(Exception):
-#   def __init__(self, msg):
-#     Exception.__init__(self, msg+msg)
-#     self.args = (msg,)
+class MyEx(Exception):
+  def __init__(self, msg):
+    Exception.__init__(self, msg+msg)
+    self.args = (msg,)
  
-# try:
-#   raise MyEx('wrong!')
-# except Exception as e:
-#   print(e)
+try:
+  raise MyEx('wrong!')
+except Exception as e:
+  print(e)
 
-# x=5
-# try:
-#   x > 3
-# except:
-#   print("a")
-# else:
-#   print("b")
-# finally:
-#   print("c") 
+x=5
+try:
+  x > 3
+except:
+  print("a")
+else:
+  print("b")
+finally:
+  print("c") 
 
 # class A:
 #  x = 'x'
@@ -78,14 +78,3 @@
 # print("\\\\")
 
 
-class A:
- b = 'b'
- 
-def __init__(self):
- self.c = 'c'
- d = self.c
- 
-a = A()
-# print(a.d)
-# print(a.b)
-print(A.__dict__)
